@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+
+
+<html> 
+
+<head> 
+        <title> Start File </title> 
+       
+	   
+	   <style> 
+		section{ 
+				margin: 3em; 
+				padding: 1.5em;
+			    text-align: center;
+
+		}
+
+		Buttons
+		{
+				margin: 6em; 
+				padding: 2.5em; 
+			    text-align: center;
+
+		}
+		Button1
+		{
+		width:100px; 
+		height:60px; 
+		}
+		
+	</style> 
+		
+</head> 
+
+<body> 
+
+	<p1><center>  Door Event program </center></p1> 
+	<section> 
+	<img id="myImage" src="Door_close.png" style="width:100px" style="height:100px">
+	</section> 
+	<section class = "Buttons"> 
+	
+	<button onclick="document.getElementById('myImage').src='Door_open.png'"> Open the door. </button>
+	<button onclick="document.getElementById('myImage').src='Door_close.png'"> Close the door. </button>
+	
+	<button onmousedown="document.getElementById('myImage').src='Door_open.png'"
+			onmouseup="document.getElementById('myImage').src='Door_close.png'"
+			onmouseout="document.getElementById('myImage').src='Door_close.png'"
+	> Hold door open  </button> 
+	<button onmouseover="document.getElementById('myImage').src='Door_open.png'"
+			onmouseout="document.getElementById('myImage').src='Door_close.png'"
+	> open door with hover</button> 
+	
+	</section> 
+</body> 
+
+
+</html> 
+	
+	
+
+
+
