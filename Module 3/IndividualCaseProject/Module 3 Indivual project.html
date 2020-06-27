@@ -1,0 +1,121 @@
+
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+        <title> Individual Project </title> 
+        <link ref="stylesheet" type="text/css" href="starter.css"/>  
+		<meta character="utf-8" /> 	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+		<meta name="description" content="a file to use for examples in a javascript class" /> 
+	
+<!-- 	<script src="starter.js" ></script> 
+--> 
+	<style> 
+		section{ 
+				border: 2px dotted blue; 
+				margin: 3em; 
+				padding: 1.5em; 
+		}
+		h3 { 
+		text-align: center;
+		}
+		h4 { 
+		text-align: center;
+		text-size: 25; 
+		}
+		
+	</style> 
+		
+</head> 
+
+<body onload = MyFunction2() > 
+
+<h4> Individual Project </h4> 
+	<section> 
+	
+	<h3> Chapter 4 Individual Case Project Addition </h3> 
+	<p1> <b> Requirement: </b> <br> Add exception handling to the code for one of the forms on your personal web site. If your site does not include a form, add one first. Your code should display one or more relevant error messages in an appropriate location. After you finalize your code, write a summary of the debugging methods from this chapter that you used in this project, describing how you used each one in your code.</p> 
+
+
+	<p><input type=number id="Input_Num"/></p> 
+	<p> Please Enter a number between 1 to 10 </p> 
+	<button onclick="myFunction()">Click me</button>
+	
+	<p id="demo"></p>
+	
+<script>
+function myFunction() {
+
+  	
+	var BirthYear = 0; 
+	
+	var Num = document.getElementById("Input_Num").value; 
+	
+	if ((Input_Num.value <=0 || Input_Num.value >= 11 )) { 
+		
+		document.getElementById("demo").innerHTML = " Please pick a number between 1 to 10. " ;  
+		
+	} 
+	else { 
+ 		document.getElementById("demo").innerHTML = " Thanks you picked a number between 1 and 10";    
+}
+ }// End of function. 
+
+</script>
+
+
+	</section> 
+	
+	<section> 
+	
+	<h3> Chapter 5 Individual Case Project </h3> 
+	
+	<p1> <b> Requirement: </b> <br> Add a page to your individual website that educates visitors about web security. Report the values of at least six properties from Tables 5-10 and 5-11 to illustrate the breadth of information about a user’s computer that a web app can access. Perform a web search on practices for using the web safely, and include links to at least three sources, along with a one-sentence summary of each. <br> </p1> 
+	 
+	 <p> <br> </p>
+	 
+	<li>  Web security is no laughing matter over, a study found that every 39 seconds an attack occurs. </li> 
+
+	<li> Identity theft impacts 60 million Americans </li> 
+
+	<li> The US goverment spends nearly 15 billion dollars on Cyber Security per year. </li> 
+
+	<li> A recent study found that 97% of people are unable to identify a phishing mail. </li> 
+	
+	<p6><br>  Sources: </p6> 
+	
+	<p id="demo1"></p>
+	<p id="demo2"></p>
+	<p id="demo3"></p>
+	
+<script>
+function MyFunction2() {
+
+
+    var str1 = "https://www.cybintsolutions.com/cyber-security-facts-stats/"; 
+    var str2 = "https://us.norton.com/internetsecurity-emerging-threats-10-facts-about-todays-cybersecurity-landscape-that-you-should-know.html"; 	
+    var str3 = "https://www.everycloudtech.com/awesome-cyber-security-facts"; 
+
+	var Link1 = str1.link("https://www.cybintsolutions.com/cyber-security-facts-stats/");  
+	var Link2 = str2.link("https://us.norton.com/internetsecurity-emerging-threats-10-facts-about-todays-cybersecurity-landscape-that-you-should-know.html"); 	
+	var Link3 = str3.link("https://www.everycloudtech.com/awesome-cyber-security-facts"); 
+
+
+  
+ 	document.getElementById("demo1").innerHTML = Link1;    
+ 	document.getElementById("demo2").innerHTML = Link2;    
+ 	document.getElementById("demo3").innerHTML = Link3;    
+
+	}
+</script> 
+	
+	
+	</section> 
+
+
+</body> 
+
+
+</html> 
