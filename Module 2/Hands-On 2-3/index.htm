@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 6th Edition
+      Chapter 2
+      Hands-on Project 2-3
+
+      Author: Chad Carmickle 	
+      Date:    3/26/2019
+
+      Filename: index.htm
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Hands-on Project 2-3</title>
+   <link rel="stylesheet" href="styles.css" />
+   <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<body>
+   <header>
+      <h1>
+         Hands-on Project 2-3
+      </h1>
+   </header>
+
+   <article>
+      <h2 id = "firstText">Pick a shape</h2>
+      <div id="square">
+         &nbsp;
+      </div>
+      <div id="triangle">
+         &nbsp;
+      </div>
+      <div id="circle">
+         &nbsp;
+	      
+
+      </div>
+   </article>
+   
+   	  <h2 id = "firstText">The assignment was basic and only wanted me to add in three listeners and alerts for when the user clicks on one of the squares the only problem I had was doing syntax for some of the tags and making the ID for the tags. After I finished doing the assignment I added some mouseover and mouseout listeners to the code to add some more content to the page. </h2>
+
+   
+   <script> 
+   
+   // Square 
+   document.getElementById("square").addEventListener("click", function() {
+	alert("You Clicked the square"); }, false);
+
+	document.getElementById("square").addEventListener("mouseover", function() { 
+		 document.getElementById("firstText").innerHTML = "Your hovering over the Square!"}, false);
+		 
+	document.getElementById("square").addEventListener("mouseout", function() { 
+		 document.getElementById("firstText").innerHTML = "Pick a shape"}, false);
+		  
+		 
+	// Square 
+   document.getElementById("triangle").addEventListener("click", function() {
+	alert("You Clicked the triangle"); }, false);
+
+	document.getElementById("triangle").addEventListener("mouseover", function() { 
+		 document.getElementById("firstText").innerHTML = "Your hovering over the triangle!"}, false);
+		 
+	document.getElementById("triangle").addEventListener("mouseout", function() { 
+		 document.getElementById("firstText").innerHTML = "Pick a shape"}, false);	 
+   
+ 	// Circle 
+     document.getElementById("circle").addEventListener("click", function() {
+	alert("You Clicked the triangle"); }, false);
+	
+	document.getElementById("circle").addEventListener("mouseover", function() { 
+		 document.getElementById("firstText").innerHTML = "Your hovering over the Circle!"}, false);
+		 
+	document.getElementById("circle").addEventListener("mouseout", function() { 
+		 document.getElementById("firstText").innerHTML = "Pick a shape"}, false);	 
+   
+   
+   </script> 
+   
+</body>
+</html>
