@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Background Example</title>
+		<!--<link rel="stylesheet" type="text/css" href="starter.css"/>-->
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="description" content="a file to use for examples in a javascript class"/>
+		<!--<script src="starter.js"></script>-->
+	</head>
+	
+	<body onload="start()">
+	 
+		
+		<img src="Forest.jpg" style="display: none" id="testpic2"/> 
+	
+		
+		<p>
+			<canvas id="canvas2" width="948" height="632">
+			</canvas>
+		</p>
+		
+		
+		
+		<script>
+		
+			function start(){				
+				drawbackground(0)
+				animation(); 
+			}
+
+			function drawbackground(x) { 
+				var scene = document.getElementById('canvas2');
+				var sketch = scene.getContext("2d");
+
+				sketch.beginPath(); 
+				
+				sketch.drawImage(testpic2, x, 70); 
+				
+				sketch.closePath(); 
+
+				
+			}
+			
+			function clearing() { 
+			var scene = document.getElementById("canvas2"); 
+			var sketch = scene.getContext("2d"); 
+			
+			sketch.beginPath(); 
+			
+			sketch.clearRect(0,0,scene.width, scene.height); 
+			
+			sketch.closePath(); 
+			} 
+			
+			var spot1 = 0 
+			var spot2 = 948; 
+			function animation() { 
+				var clock = setTimeout(function() {animation(); }, 84); 
+			
+				clearing(); 
+				drawbackground(spot1);
+				drawbackground(spot2); 
+				
+				spot1 -=4; 
+				spot2 -=4; 
+				
+				if(spot1 < -947) { 
+					spot1 = +948; 
+				}
+				if (spot2 < -947) { 
+					spot2 = + 948;   
+					
+					}
+				
+			} 
+			
+
+		
+		</script>
+	
+	
+	</body>
+
+</html>

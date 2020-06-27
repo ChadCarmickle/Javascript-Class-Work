@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<script src="Animation.js"></script> 
+
+<style>
+.RightMenu {
+    float: right; 
+	margin-right: 5em; 
+}
+</style>
+</head>
+<body onload="start()"> <!-- Calling my Function --> 
+
+	<!-- Uploading the pictures --> 
+	<img src="Frame1.png" id="frame1" style="display: none"/>
+	<img src="Frame2.png" id="frame2" style="display: none"/>
+	<img src="Frame3.png" id="frame3" style="display: none"/>
+	<img src="Frame4.png" id="frame4" style="display: none"/>
+
+	<!-- <img src="beach_Background.jpg" id="Background" style="display:none"/>
+--> 
+	<img src="beach_Background.jpg" id="Beach" style="display:none"/>
+	<img src="Night.jpg" id="Night" style="display:none"/>
+	
+	<canvas id="myCanvas" width="1000" height="632" "> </canvas>
+	 
+	
+	<div class = RightMenu> 
+	Beach
+	<input type="checkbox" id="Beach_radio" onclick = "Beach_Background()">
+	Night 
+	<input type="checkbox" id="Night_radio" onclick = "Night_Background()">
+	
+	</div> 
+
+
+
+</body>
+</html>

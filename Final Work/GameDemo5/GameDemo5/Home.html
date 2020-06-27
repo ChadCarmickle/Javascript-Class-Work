@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+<script src="Animation.js"></script> 
+
+<link rel="stylesheet" type="text/css" href="Game.css">
+ 
+</head>
+<body onload="start()"> <!-- Calling my Function --> 
+<header> <img src="logo.PNG" class="logo" width: 50px height: 50px/> </header> 
+
+	<img src="beach_Background.jpg" id="Beach" style="display:none"/>
+	<img src="Night.jpg" id="Night" style="display:none"/>
+	
+	<div class = LeftMenu> 
+	
+	<p class = Intro> Welcome to my Pokemon run game! </p> 
+	<h class = i > objective </h>
+	<p class = Intro> dodge the pokemon and collect ketchup! </p> 
+	
+	<h class = Intro> Controls:  </h> 
+		<p class = Intro> A / Left arrow key: Move left   </p> 
+		<p class = Intro> D / Right arrow key: Move right   </p> 
+		<p class = Intro> W / Space bar / Up arrow key: Jump   </p> 
+		<p class = Intro> Etc / Enter / Space bar: Restart game!   </p> 
+
+	
+	</div> 
+	
+	<canvas id="myCanvas" class="myCanvas" width="1000" height="632" "> 
+
+	
+	
+	</canvas>
+	
+	<div id = "gameover"> 
+	<p id ="gameoverText"> Game Over! </p>  
+	</div> 
+	
+	<div class = ScoreDiv> 	
+	<p id = "GameScoreText"> Score: </p> 
+	<p id ="gameScore"> </p> 
+	</div> 
+	
+	<div class = "HighScoreDiv">  
+	<p> High Score! </p> 
+	<p>  </p> 
+	<p>  </p> 
+	<p>  </p> 
+	</div>
+	
+	<!------------------------------------------------------------------------------------------------------------------------------
+													Pokemon enemie Pictures. 
+	--------------------------------------------------------------------------------------------------------------------------------
+
+	
+<!-- Pikachu --> 
+	<img src="Pokemon\Frame1.png" id="frame1" style="display: none"/>
+	<img src="Pokemon\Frame2.png" id="frame2" style="display: none"/>
+	<img src="Pokemon\Frame3.png" id="frame3" style="display: none"/>
+	<img src="Pokemon\Frame4.png" id="frame4" style="display: none"/>
+
+<!-- Enemies! --> 
+	<!--Rock--> 
+	<img src="rock.png" id="rock" style="display: none"/>
+	<!--Rock2--> 
+	<img src="rock2.png" id="SecondRock" style="display: none"/>
+	
+	<!--ketchup--> 	
+	<img src="Pokemon\ketchup.png" id="ketchup" style="display: none"/>
+	
+	<!--chikorita--> 
+	<img src="Pokemon\pokemon1_frame1.png" id="chikorita_frame0" style="display: none"/>
+	<img src="Pokemon\pokemon1_frame2.png" id="chikorita_frame1" style="display: none"/>
+			
+	<!--Magickarp--> 			
+	<img src="Pokemon\pokemon2_frame0.png" id="Magickarp_frame0" style="display: none"/>
+	<img src="Pokemon\pokemon2_frame1.png" id="Magickarp_frame1" style="display: none"/>
+	<img src="Pokemon\pokemon2_frame2.png" id="Magickarp_frame2" style="display: none"/>
+	<img src="Pokemon\pokemon2_frame3.png" id="Magickarp_frame3" style="display: none"/>	
+	
+	<!--cyndaquil--> 
+	<img src="Pokemon\cyndaquil_(1).png" id="cyndaquil_1" height="50" width="50" style="display: none"/>	
+	<img src="Pokemon\cyndaquil_(2).png" id="cyndaquil_2" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\cyndaquil_(3).png" id="cyndaquil_3" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\cyndaquil_(4).png" id="cyndaquil_4" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\cyndaquil_(5).png" id="cyndaquil_5" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\cyndaquil_(6).png" id="cyndaquil_6" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\cyndaquil_(7).png" id="cyndaquil_7" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\cyndaquil_(8).png" id="cyndaquil_8" height="50" width="50" style="display: none"/>	
+	<img src="Pokemon\cyndaquil_(9).png" id="cyndaquil_9" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\cyndaquil_(10).png" id="cyndaquil_10" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\cyndaquil_(11).png" id="cyndaquil_11" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\cyndaquil_(12).png" id="cyndaquil_12" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\cyndaquil_(13).png" id="cyndaquil_13" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\cyndaquil_(14).png" id="cyndaquil_14" height="50" width="50" style="display: none"/>
+		
+	<!--Haunter--> 		
+	<img src="Pokemon\Haunter_(1).png" id="Haunter_1" height="200" width="200" style="display: none"/>	
+	<img src="Pokemon\Haunter_(2).png" id="Haunter_2" height="200" width="200" style="display: none"/>
+	<img src="Pokemon\Haunter_(3).png" id="Haunter_3" height="200" width="200" style="display: none"/>
+	<img src="Pokemon\Haunter_(4).png" id="Haunter_4" height="200" width="200" style="display: none"/>
+	<img src="Pokemon\Haunter_(5).png" id="Haunter_5" height="200" width="200" style="display: none"/>
+	<img src="Pokemon\Haunter_(6).png" id="Haunter_6" height="200" width="200" style="display: none"/>
+	<img src="Pokemon\Haunter_(7).png" id="Haunter_7" height="200" width="200" style="display: none"/>
+	<img src="Pokemon\Haunter_(8).png" id="Haunter_8" height="200" width="200" style="display: none"/>	
+	<img src="Pokemon\Haunter_(9).png" id="Haunter_9" height="200" width="200" style="display: none"/>
+	<img src="Pokemon\Haunter_(10).png" id="Haunter_10" height="200" width="200" style="display: none"/>
+	<img src="Pokemon\Haunter_(11).png" id="Haunter_11" height="200" width="200" style="display: none"/>
+	<img src="Pokemon\Haunter_(12).png" id="Haunter_12" height="200" width="200" style="display: none"/>
+	<img src="Pokemon\Haunter_(13).png" id="Haunter_13" height="200" width="200" style="display: none"/>
+	<img src="Pokemon\Haunter_(14).png" id="Haunter_14" height="200" width="200" style="display: none"/>
+	
+	<!--Hoppip--> 
+	<img src="Pokemon\Hoppip_(1).png" id="Hoppip_1" height="100" width="100" style="display: none"/>	
+	<img src="Pokemon\Hoppip_(2).png" id="Hoppip_2" height="100" width="100" style="display: none"/>
+	<img src="Pokemon\Hoppip_(3).png" id="Hoppip_3" height="100" width="100" style="display: none"/>
+	<img src="Pokemon\Hoppip_(4).png" id="Hoppip_4" height="100" width="100" style="display: none"/>
+	<img src="Pokemon\Hoppip_(5).png" id="Hoppip_5" height="100" width="100" style="display: none"/>
+	<img src="Pokemon\Hoppip_(6).png" id="Hoppip_6" height="100" width="100" style="display: none"/>
+	<img src="Pokemon\Hoppip_(7).png" id="Hoppip_7" height="100" width="100" style="display: none"/>
+	<img src="Pokemon\Hoppip_(8).png" id="Hoppip_8" height="100" width="100" style="display: none"/>	
+	<img src="Pokemon\Hoppip_(9).png" id="Hoppip_9" height="100" width="100" style="display: none"/>
+	<img src="Pokemon\Hoppip_(10).png" id="Hoppip_10" height="100" width="100" style="display: none"/>
+	
+	<!--Jolt--> 
+	<img src="Pokemon\jolt_(1).png" id="jolt_1" height="100" width="100" style="display: none" />	
+	<img src="Pokemon\jolt_(2).png" id="jolt_2" height="100" width="100" style="display: none"/>
+	<img src="Pokemon\jolt_(3).png" id="jolt_3" height="100" width="100" style="display: none"/>
+	<img src="Pokemon\jolt_(4).png" id="jolt_4" height="100" width="100" style="display: none"/>
+	
+	<!--vaporeon--> 
+	<img src="Pokemon\vaporeon_(1).png" id="vaporeon_1" height="50" width="50" style="display: none"/>	
+	<img src="Pokemon\vaporeon_(2).png" id="vaporeon_2" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\vaporeon_(3).png" id="vaporeon_3" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\vaporeon_(4).png" id="vaporeon_4" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\vaporeon_(5).png" id="vaporeon_5" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\vaporeon_(6).png" id="vaporeon_6" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\vaporeon_(7).png" id="vaporeon_7" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\vaporeon_(8).png" id="vaporeon_8" height="50" width="50" style="display: none"/>	
+	<img src="Pokemon\vaporeon_(9).png" id="vaporeon_9" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\vaporeon_(10).png" id="vaporeon_10" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\vaporeon_(11).png" id="vaporeon_11" height="50" width="50" style="display: none"/>	
+	<img src="Pokemon\vaporeon_(12).png" id="vaporeon_12" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\vaporeon_(13).png" id="vaporeon_13" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\vaporeon_(14).png" id="vaporeon_14" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\vaporeon_(15).png" id="vaporeon_15" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\vaporeon_(16).png" id="vaporeon_16" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\vaporeon_(17).png" id="vaporeon_17" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\vaporeon_(18).png" id="vaporeon_18" height="50" width="50" style="display: none"/>	
+	<img src="Pokemon\vaporeon_(19).png" id="vaporeon_19" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\vaporeon_(20).png" id="vaporeon_20" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\vaporeon_(21).png" id="vaporeon_21" height="50" width="50" style="display: none"/>	
+	<img src="Pokemon\vaporeon_(22).png" id="vaporeon_22" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\vaporeon_(23).png" id="vaporeon_23" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\vaporeon_(24).png" id="vaporeon_24" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\vaporeon_(25).png" id="vaporeon_25" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\vaporeon_(26).png" id="vaporeon_26" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\vaporeon_(27).png" id="vaporeon_27" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\vaporeon_(28).png" id="vaporeon_28" height="50" width="50" style="display: none"/>	
+	
+	<!--pidgey--> 	
+	<img src="Pokemon\pidgey_(1).png" id="pidgey_1" height="50" width="50" style="display: none"/>	
+	<img src="Pokemon\pidgey_(2).png" id="pidgey_2" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\pidgey_(3).png" id="pidgey_3" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\pidgey_(4).png" id="pidgey_4" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\pidgey_(5).png" id="pidgey_5" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\pidgey_(6).png" id="pidgey_6" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\pidgey_(7).png" id="pidgey_7" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\pidgey_(8).png" id="pidgey_8" height="50" width="50" style="display: none"/>	
+	<img src="Pokemon\pidgey_(9).png" id="pidgey_9" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\pidgey_(10).png" id="pidgey_10" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\pidgey_(11).png" id="pidgey_11" height="50" width="50" style="display: none"/>	
+	<img src="Pokemon\pidgey_(12).png" id="pidgey_12" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\pidgey_(13).png" id="pidgey_13" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\pidgey_(14).png" id="pidgey_14" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\pidgey_(15).png" id="pidgey_15" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\pidgey_(16).png" id="pidgey_16" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\pidgey_(17).png" id="pidgey_17" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\pidgey_(18).png" id="pidgey_18" height="50" width="50" style="display: none"/>	
+	<img src="Pokemon\pidgey_(19).png" id="pidgey_19" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\pidgey_(20).png" id="pidgey_20" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\pidgey_(21).png" id="pidgey_21" height="50" width="50" style="display: none"/>	
+	<img src="Pokemon\pidgey_(22).png" id="pidgey_22" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\pidgey_(23).png" id="pidgey_23" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\pidgey_(24).png" id="pidgey_24" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\pidgey_(25).png" id="pidgey_25" height="50" width="50" style="display: none"/>
+	
+	<!--Taros--> 	
+	<img src="Pokemon\Taros_(1).png" id="Taros_1" height="150" width="300" style="display: none"/>	
+	<img src="Pokemon\Taros_(2).png" id="Taros_2" height="150" width="300" style="display: none"/>
+	<img src="Pokemon\Taros_(3).png" id="Taros_3" height="150" width="300" style="display: none"/>
+	<img src="Pokemon\Taros_(4).png" id="Taros_4" height="150" width="300" style="display: none"/>
+	<img src="Pokemon\Taros_(5).png" id="Taros_5" height="150" width="300" style="display: none"/>
+	<img src="Pokemon\Taros_(6).png" id="Taros_6" height="150" width="300" style="display: none"/>
+	<img src="Pokemon\Taros_(7).png" id="Taros_7" height="150" width="300" style="display: none"/>
+	<img src="Pokemon\Taros_(8).png" id="Taros_8" height="150" width="300" style="display: none"/>
+
+	<!--Snorlax--> 	
+	<img src="Pokemon\Snorlax_(1).png" id="Snorlax_1" height="150" width="210" style="display: none"/>	
+	<img src="Pokemon\Snorlax_(2).png" id="Snorlax_2" height="150" width="210" style="display: none"/>
+	<img src="Pokemon\Snorlax_(3).png" id="Snorlax_3" height="150" width="210" style="display: none"/>
+	<img src="Pokemon\Snorlax_(4).png" id="Snorlax_4" height="150" width="210" style="display: none"/>
+	<img src="Pokemon\Snorlax_(5).png" id="Snorlax_5" height="150" width="210" style="display: none"/>
+	<img src="Pokemon\Snorlax_(6).png" id="Snorlax_6" height="150" width="210" style="display: none"/>
+	<img src="Pokemon\Snorlax_(7).png" id="Snorlax_7" height="150" width="210" style="display: none"/>
+	<img src="Pokemon\Snorlax_(8).png" id="Snorlax_8" height="150" width="210" style="display: none"/>	
+	<img src="Pokemon\Snorlax_(7).png" id="Snorlax_7" height="150" width="210" style="display: none"/>
+	<img src="Pokemon\Snorlax_(8).png" id="Snorlax_8" height="150" width="210" style="display: none"/>	
+		
+	<!--mew--> 	
+	<img src="Pokemon\mew_(1).png" id="mew_1" height="100" width="100" style="display: none"/>	
+	<img src="Pokemon\mew_(2).png" id="mew_2" height="100" width="100" style="display: none"/>
+	<img src="Pokemon\mew_(3).png" id="mew_3" height="100" width="100" style="display: none"/>
+	<img src="Pokemon\mew_(4).png" id="mew_4" height="100" width="100" style="display: none"/>
+	<img src="Pokemon\mew_(5).png" id="mew_5" height="100" width="100" style="display: none"/>
+	<img src="Pokemon\mew_(6).png" id="mew_6" height="100" width="100" style="display: none"/>
+	<img src="Pokemon\mew_(7).png" id="mew_7" height="100" width="100" style="display: none"/>
+	<img src="Pokemon\mew_(8).png" id="mew_8" height="100" width="100" style="display: none"/>	
+	<img src="Pokemon\mew_(7).png" id="mew_7" height="100" width="100" style="display: none"/>
+	<img src="Pokemon\mew_(8).png" id="mew_8" height="100" width="100" style="display: none"/>	
+	
+	<!--caterpie-->  	
+	<img src="Pokemon\caterpie_(1).png" id="caterpie_1" height="50" width="50" style="display: none"/>	
+	<img src="Pokemon\caterpie_(2).png" id="caterpie_2" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\caterpie_(3).png" id="caterpie_3" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\caterpie_(4).png" id="caterpie_4" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\caterpie_(5).png" id="caterpie_5" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\caterpie_(6).png" id="caterpie_6" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\caterpie_(7).png" id="caterpie_7" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\caterpie_(8).png" id="caterpie_8" height="50" width="50" style="display: none"/>	
+	<img src="Pokemon\caterpie_(7).png" id="caterpie_7" height="50" width="50" style="display: none"/>
+	<img src="Pokemon\caterpie_(8).png" id="caterpie_8" height="50" width="50" style="display: none"/>	
+	
+	<!--cubone--> 	
+	<img src="Pokemon\cubone_(1).png" id="cubone_1" height="100" width="100" style="display: none"/>	
+	<img src="Pokemon\cubone_(2).png" id="cubone_2" height="100" width="100" style="display: none"/>
+	<img src="Pokemon\cubone_(3).png" id="cubone_3" height="100" width="100" style="display: none"/>
+	<img src="Pokemon\cubone_(4).png" id="cubone_4" height="100" width="100" style="display: none"/>
+	<img src="Pokemon\cubone_(5).png" id="cubone_5" height="100" width="100" style="display: none"/>
+
+</body>
+</html>

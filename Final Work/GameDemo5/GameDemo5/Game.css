@@ -1,0 +1,95 @@
+
+html, body { 
+	height: 100%; 
+} 
+
+
+body{ 
+	margin: 0; 
+	display: flex; 
+	background-image: url("background.jpg");
+	background-repeat: no-repeat; 
+	justify-content: center; 
+	
+	align-items: center; 
+}
+header { 
+	padding: 0;
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+	left: 23%;
+}
+
+.myCanvas { 
+	padding: 0;
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 150px;
+    bottom: 0;
+    left: 0;
+    right: 0;  
+	border: 70px solid transparent;
+	border-image-source: url(pokeball.PNG);
+    border-image-repeat: round;
+    border-image-slice: 30;
+	width: 60em; 
+	padding: 15px; 
+}
+	} 
+ 
+.logo { 
+	width: 110%; 
+	height: 20%; 
+}
+ 
+.ScoreDiv { 
+	position: absolute;
+	font-size: 6em;
+	line-height: 10px; 
+    left: 16.2em;
+    top: 0px;
+	font-family: Comic Sans MS
+}
+
+.HighScoreDiv { 
+	position: absolute;
+	font-size: 4em; 
+    left: 24em;
+    top: 5em;
+    font-family: Comic Sans MS
+} 
+.TopLable { 
+	position: absolute;
+    top: 83%;
+}
+.BackgroundLbl { 
+  display: inline-block;
+
+} 
+.MobLabel { 
+  display: inline-block;
+
+} 
+
+.LeftMenu { 
+	position: absolute;
+	left: 40px; 
+	top: 250px; 
+}
+.gameoverText {  
+ font-size: 10em; 
+}  
+
+.gameover { 
+ display: None; 
+ position: relative; 
+ top: 150px;
+}  
+
+
+
+  

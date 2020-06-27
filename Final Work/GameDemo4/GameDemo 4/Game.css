@@ -1,0 +1,71 @@
+
+html, body { 
+	height: 100%; 
+} 
+
+
+body{ 
+	margin: 0; 
+	display: flex; 
+	background-image: url("background.jpg");
+	background-repeat: no-repeat; 
+	justify-content: center; 
+	
+	align-items: center; 
+}
+header { 
+	padding: 0;
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+	left: 23%;
+}
+
+.myCanvas { 
+	padding: 0;
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;  
+	border: 10px solid transparent;
+	border-image-source: url(pokeball.PNG);
+    border-image-repeat: round;
+    border-image-slice: 30;
+	
+	width: 50%; 
+}
+	
+	} 
+ 
+.logo { 
+	width: 110%; 
+	height: 20%; 
+}
+.RightMenu { 
+    position: absolute;
+    left: 30%;
+    top: 90%;
+	
+} 
+.RightBottomMenu { 
+	position: absolute;
+    left: 60%;
+    top: 90%;
+}
+.TopLable { 
+	position: absolute;
+    top: 83%;
+}
+.BackgroundLbl { 
+  display: inline-block;
+
+} 
+.MobLabel { 
+  display: inline-block;
+
+}   

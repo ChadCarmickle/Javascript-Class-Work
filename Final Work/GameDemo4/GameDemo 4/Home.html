@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<script src="Animation.js"></script> 
+<!-- <link rel="stylesheet" type="text/css" href="Game.css">
+--> 
+</head>
+<body onload="start()"> <!-- Calling my Function --> 
+<header> <img src="logo.PNG" class="logo" width: 50px height: 50px/> </header> 
+
+	<!-- Uploading the pictures --> 
+	<img src="Frame1.png" id="frame1" style="display: none"/>
+	<img src="Frame2.png" id="frame2" style="display: none"/>
+	<img src="Frame3.png" id="frame3" style="display: none"/>
+	<img src="Frame4.png" id="frame4" style="display: none"/>
+
+	<!-- Uploading mobs --> 
+	<img src="rock.PNG" id="rock" style="display: none"/>
+		
+	<img src="ketchup.PNG" id="ketchup" style="display: none"/>
+	
+	<img src="pokemon1_frame1.PNG" id="pokemon1_frame1" style="display: none"/>
+	<img src="pokemon1_frame2.PNG" id="pokemon1_frame2" style="display: none"/>
+	
+	<img src="pokemon1_frame1.PNG" id="pokemon1_frame1" style="display: none"/>
+	<img src="pokemon2_frame2.PNG" id="pokemon2_frame2" style="display: none"/>
+	<img src="pokemon2_frame3.PNG" id="pokemon3_frame3" style="display: none"/>
+	<img src="pokemon2_frame4.PNG" id="pokemon4_frame4" style="display: none"/>
+
+	
+
+	<img src="beach_Background.jpg" id="Beach" style="display:none"/>
+	<img src="Night.jpg" id="Night" style="display:none"/>
+	
+	
+	
+	<canvas id="myCanvas" class="myCanvas" width="1000" height="632" "> 
+
+	
+	
+	</canvas>
+	 
+	<div class = TopLable>
+	<p> Change Background: </p> 
+	<p> Change Mob </p> 
+
+	</div> 
+	
+	<div class = RightMenu> 
+	Beach
+	<input type="checkbox" id="Beach_radio" onclick = "Beach_Background()">
+	
+	Night 
+	<input type="checkbox" id="Night_radio" onclick = "Night_Background()">
+	
+	</div> 
+	
+	<div class = RightBottomMenu> 
+	Ketchup
+	<input type="checkbox" id="Ketchup_radio" onclick = "Mob_Spawn_Ketchup()">
+	chikorita
+	<input type="checkbox" id="Pokemon2_radio" onclick = "Mob_Spawn_Pokemon1()">
+	Magikarp 
+	<input type="checkbox" id="Pokemon1_radio" onclick = "Mob_Spawn_Pokemon2()">
+	Rock
+	<input type="checkbox" id="Rock_radio" onclick = "Mob_Spawn_Rock()">
+	
+	<p id ="gameover"> </p> 
+	<p id ="gameScore"> </p> 
+	</div> 
+	
+
+
+
+</body>
+</html>
