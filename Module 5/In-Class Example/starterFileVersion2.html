@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>EXAMPLE</title>
+	</head>
+
+
+	<body>
+	
+			<!-- Making the input boxes to take in the users first,last and age. --> 
+		<p>A.)First Name <input type="text" id="inputA"/></p>
+		<p>B.)Last Name <input type="text" id="inputB"/></p>
+		<p>C.)Age <input type="text" id="inputC"/></p>				
+		
+		<p>1.) <span id="output1"></span></p>
+		<p>2.) <span id="output2"></span></p>
+		<p>3.) <span id="output3"></span></p>
+		<p>4.) <span id="output4"></span></p>
+		<p>5.) <span id="output5"></span></p>
+		<p>6.) <span id="output6"></span></p>
+		<p>7.) <span id="output7"></span></p>
+	
+
+		
+		<p><button onclick="start()">CLICK HERE!!!</button></p>
+		
+		
+		<script>
+			var inputA = document.getElementById('inputA');
+			var inputB = document.getElementById('inputB');
+			var inputC = document.getElementById('inputC');
+
+			
+			var output1 = document.getElementById('output1');
+			var output2 = document.getElementById('output2');
+			var output3 = document.getElementById('output3');
+			var output4 = document.getElementById('output4');
+			var output5 = document.getElementById('output5');
+			var output6 = document.getElementById('output6');
+			var output7 = document.getElementById('output7');
+
+			
+			function start(){
+				setCookies(); 
+				// getCookies(); 
+			}
+		
+		function setCookies() { 
+		
+		// We need variables inside here to hold the data. 
+		var firstName = inputA.value; 
+		var LastName = inputB.value; 
+		var Age = inputC.value; 
+		
+		
+		// Setting the varaibles to the users input. 
+		document.cookie = "first=" + firstName; 
+		document.cookie = "last=" + LastNameName; 
+		document.cookie = "age=" + age; 
+
+		
+		output1.innerHTML = "STORE: " + firstName + " , " + LastName + ", " + Age ;  
+
+		} 
+		
+		function getCookies() { 
+		
+		} 
+		
+		
+		</script>
+	
+	
+	</body>
+
+</html>
